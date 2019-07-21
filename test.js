@@ -70,5 +70,13 @@ const convertKF = () =>{
   }else{
     document.getElementById("resultados").innerHTML = "A temperatura em Celsius é de: " + resultado1KF + "C";
   }
+}
+const closeTop = () =>{
+  var topo = document.getElementById('resultados');
+  if(topo.style.display === "none"){
+    topo.style.display = "block";
+  }else{
+    topo.style.display = "none";
+  }
 
 }
