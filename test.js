@@ -1,8 +1,7 @@
 const convertCF = () =>{
     var tempC = document.getElementById('inputC').value;
     var sTempC = Number(tempC);
-    var resultado1 = (sTempC / 5) * 9;
-    var resultadoFinal = resultado1 + 32;
+    var resultadoFinal = (sTempC / 5) * 9 + 32;
 
      if(!tempC){
        var resultadoIv = document.getElementById("resultados").innerHTML = "Por favor insira um valor válido!";
@@ -29,8 +28,8 @@ const convertCK = () =>{
 const convertFC = () =>{
   var tempF = document.getElementById('inputC').value;
   var sTempF = Number(tempF);
-  var resultado1F = (sTempF - 32) / 9;
-  var resultadofinalF = resultado1F * 5;
+  var resultadofinalF = (sTempF - 32) / 9 * 5 ;
+
 
   if(!tempF){
     document.getElementById("resultados").innerHTML = "Por favor insira um valor válido!";
@@ -42,13 +41,34 @@ const convertFC = () =>{
 const convertFK = () =>{
   var tempF = document.getElementById('inputC').value;
   var sTempF = Number(tempF);
-  var resultado1FK = (sTempF - 32) / 9;
-  var resultado2FK = resultado1FK * 5;
-  var resultadofinal = resultado2FK + 273;
-
+  var resultadofinalFK = (sTempF - 32) / 9 * 5 + 273;
   if(!tempF){
     document.getElementById("resultados").innerHTML = "Por favor insira um valor válido!";
   }else{
-    document.getElementById("resultados").innerHTML = "A temperatura em Kelvin é de: " + resultadofinal + "K";
+    document.getElementById("resultados").innerHTML = "A temperatura em Kelvin é de: " + resultadofinalFK + "K";
+
   }
+}
+
+const convertKC = () =>{
+  var tempK = document.getElementById('inputC').value;
+  var stempK = Number(tempK);
+  var resultadoFinalKC = stempK - 273;
+  if(!tempK){
+    document.getElementById("resultados").innerHTML = "Por favor insira um valor válido!";
+  }else{
+    document.getElementById("resultados").innerHTML = "A temperatura em Celsius é de: " + resultadoFinalKC + "C";
+  }
+}
+
+const convertKF = () =>{
+  var tempK = document.getElementById('inputC').value;
+  var stempK = Number(tempK);
+  var resultado1KF = (stempK - 273) / 5 * 9 + 32;
+  if(!tempK){
+    document.getElementById("resultados").innerHTML = "Por favor insira um valor válido!";
+  }else{
+    document.getElementById("resultados").innerHTML = "A temperatura em Celsius é de: " + resultado1KF + "C";
+  }
+
 }
